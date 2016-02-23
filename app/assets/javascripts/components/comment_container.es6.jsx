@@ -10,6 +10,9 @@ class CommentsContainer extends React.Component {
   render () {
     return (
       <div className="comments-container">
+        <h2> Add a comment</h2>
+        <CommentForm/>
+        <hr/>
         <CommentList comments={this.state.comments} />
       </div>
     );
