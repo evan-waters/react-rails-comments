@@ -18,12 +18,13 @@ class CommentForm extends React.Component {
 
   handleChange (event) {
     const name = event.target.name;
-    this.setState({[name]: event.target.value})
+    this.setState({[name]: event.target.value.trim()})
   }
 
   handleSubmit (event) {
     event.preventDefault()
     $.post('comments', {comment: this.state}, (data) => {
+      this.props.handleNewComment(data)
       this.setState({
         author: '',
         email: '',

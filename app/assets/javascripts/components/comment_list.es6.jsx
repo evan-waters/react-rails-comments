@@ -6,9 +6,12 @@ class CommentList extends React.Component {
 
     return (
       <div className="comments">
-        {commentElements}
+        <h3>Comments ({this.props.commentCount})</h3>
+        <ul className="comment-list list-group">
+          {commentElements}
+        </ul>
       </div>
-    )
+    );
   }
 }
 
