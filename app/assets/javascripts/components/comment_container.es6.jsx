@@ -1,7 +1,7 @@
 class CommentsContainer extends React.Component {
   constructor (props) {
     super(props)
-
+    console.log(this.props.comments)
     this.state = {
       comments: this.props.comments,
       commentCount: this.props.comments.length
